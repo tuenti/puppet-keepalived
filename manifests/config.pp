@@ -50,5 +50,8 @@ class keepalived::config {
   create_resources(keepalived::vrrp::instance, $::keepalived::vrrp_instance)
   create_resources(keepalived::vrrp::script, $::keepalived::vrrp_script)
   create_resources(keepalived::vrrp::sync_group, $::keepalived::vrrp_sync_group)
+
+  create_resources(keepalived::vrrp::real_server, $::keepalived::lvs_real_servers)
+  create_resources(keepalived::vrrp::virtual_server, $::keepalived::lvs_virtual_servers)
 }
 

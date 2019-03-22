@@ -38,9 +38,9 @@ define keepalived::lvs::real_server (
 ) {
   $_name = regsubst($name, '[:\/\n]', '')
 
-  if ( ! is_ip_address($ip_address) ) {
-    fail('Invalid IP address')
-  }
+  # if ( ! is_ip_address($ip_address) ) {
+  #   fail('Invalid IP address')
+  # }
 
   validate_re($port, '^[0-9]{1,5}$', "Invalid port: ${port}")
 
