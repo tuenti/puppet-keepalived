@@ -33,10 +33,10 @@ virtual_server <%= @ip_address %> <%= @port %> {
   hysteresis <%= @hysteresis %>
   <%- end -%>
   <%- if @retry -%>
-  hysteresis <%= @retry %>
+  retry <%= @retry %>
   <%- end -%>
   <%- if @delay_before_retry -%>
-  hysteresis <%= @delay_before_retry %>
+  delay_before_retry <%= @delay_before_retry %>
   <%- end -%>
   protocol <%= @protocol %>
   <%- if @sorry_server -%>
