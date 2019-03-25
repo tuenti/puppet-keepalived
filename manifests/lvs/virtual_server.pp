@@ -122,6 +122,8 @@ define keepalived::lvs::virtual_server (
   $tcp_check            = undef,
   $real_server_options  = {},
   $virtualhost          = undef,
+  $retry                = undef,
+  $delay_before_retry   = undef,
 ) {
   $_name = regsubst($name, '[:\/\n]', '')
 
