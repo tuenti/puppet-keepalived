@@ -101,6 +101,9 @@
 #   you to easily export a real_server resource on each node in the pool.
 #   Defaults to true => collect exported real_servers
 #
+# [*one_packet_scheduler*]
+#   Boolean. Enable One-Packet-Scheduling for UDP (-O in ipvsadm)
+#
 define keepalived::lvs::virtual_server (
   $lb_algo,
   $ip_address           = undef,
@@ -122,8 +125,7 @@ define keepalived::lvs::virtual_server (
   $tcp_check            = undef,
   $real_server_options  = {},
   $virtualhost          = undef,
-  $retry                = undef,
-  $delay_before_retry   = undef,
+  $one_packet_scheduler = undef,
 ) {
   $_name = regsubst($name, '[:\/\n]', '')
 
