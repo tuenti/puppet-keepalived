@@ -35,6 +35,8 @@ define keepalived::vrrp::script (
   $fall      = undef,
   $rise      = undef,
   $timeout   = undef,
+  $user      = undef,
+  $group     = undef,
   $no_weight = false,
 ) {
   $_name = regsubst($name, '[:\/\n]', '')
