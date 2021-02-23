@@ -22,6 +22,12 @@
 # $timeout::  max time to wait for the vrrp script to return.
 #             Default: undef
 #
+# $user::     user to run the vrrp script under.
+#             Default: undef
+#
+# $group::    group to run the vrrp script under - only used if $user is also set.
+#             Default: undef
+#
 define keepalived::vrrp::script (
   $interval  = '2',
   $script    = undef,
