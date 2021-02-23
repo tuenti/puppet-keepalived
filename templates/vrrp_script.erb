@@ -13,5 +13,8 @@ vrrp_script <%= @_name %> {
   <%- if @timeout -%>
   timeout      <%= @timeout %>
   <%- end -%>
+  <%- if @user -%>
+  user      <%= @user %><% if @group %> <%= @group %><% end %>
+  <%- end -%>
 }
 
